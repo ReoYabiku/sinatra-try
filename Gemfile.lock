@@ -2,8 +2,18 @@ GEM
   remote: https://rubygems.org/
   specs:
     base64 (0.3.0)
+    domain_name (0.6.20240107)
+    http-accept (1.7.0)
+    http-cookie (1.1.6)
+      domain_name (~> 0.5)
+    json (2.19.4)
     logger (1.7.0)
+    mime-types (3.7.0)
+      logger
+      mime-types-data (~> 3.2025, >= 3.2025.0507)
+    mime-types-data (3.2026.0414)
     mustermann (3.1.1)
+    netrc (0.11.0)
     nio4r (2.7.5)
     puma (8.0.1)
       nio4r (~> 2.0)
@@ -17,6 +27,11 @@ GEM
       rack (>= 3.0.0)
     rackup (2.3.1)
       rack (>= 3)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     sinatra (4.2.1)
       logger (>= 1.6.0)
       mustermann (~> 3.0)
@@ -31,8 +46,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json (~> 2.19)
   puma (= 8.0.1)
   rackup (= 2.3.1)
+  rest-client (~> 2.1)
   sinatra (= 4.2.1)
 
 BUNDLED WITH
